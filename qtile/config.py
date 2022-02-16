@@ -258,7 +258,7 @@ def init_widgets_list():
                        ),
               widget.GroupBox(
                        font = "Ubuntu Bold",
-                       fontsize = 9,
+                       fontsize = 12,
                        margin_y = 3,
                        margin_x = 0,
                        padding_y = 5,
@@ -289,7 +289,8 @@ def init_widgets_list():
                        foreground = colors[2],
                        background = colors[0],
                        padding = 0,
-                       scale = 0.7
+                       scale = 0.7,
+			fontsize = 12
                        ),
               widget.CurrentLayout(
                        foreground = colors[2],
@@ -348,7 +349,8 @@ def init_widgets_list():
                        #threshold = 90,
                        #fmt = 'Temp: {}',
                        padding = 5,
-		               zone = "/sys/class/thermal/thermal_zone1/temp"
+		       zone = "/sys/class/thermal/thermal_zone1/temp",
+			fontsize = 15
                        ),
               widget.TextBox(
                        text='',
@@ -367,7 +369,8 @@ def init_widgets_list():
                        colour_no_updates = colors[1],
                        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
                        padding = 5,
-                       background = colors[5]
+                       background = colors[5],
+			fontsize = 15
                        ),
               widget.TextBox(
                        text = '',
@@ -382,7 +385,8 @@ def init_widgets_list():
                        background = colors[6],
                        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
                        fmt = 'Mem: {}',
-                       padding = 5
+                       padding = 5,
+			fontsize = 15
                        ),              
               widget.TextBox(
                        text = '',
@@ -396,7 +400,8 @@ def init_widgets_list():
                        foreground = colors[1],
                        background = colors[7],
                        fmt = 'Vol: {}',
-                       padding = 5
+                       padding = 5,
+			fontsize = 15
                        ),
               widget.TextBox(
                        text = '',
@@ -433,8 +438,9 @@ def init_widgets_list():
               widget.Clock(
                        foreground = colors[1],
                        background = colors[9],
-                       format = "%A, %B %d - %H:%M "
-                       ),
+                       format = "%A, %B %d - %H:%M ",
+                       fontsize = 15
+		       ),
               widget.TextBox(
                        text = '',
                        font = "Ubuntu Mono",
@@ -447,7 +453,8 @@ def init_widgets_list():
 		       foreground = colors[1],
                        background = colors[8],
                        format = '{char} {percent:2.0%} {watt:.2f}W',
-                       update_interval = 10
+                       update_interval = 10,
+			fontsize = 15
 	               ),
               ]
     return widgets_list
