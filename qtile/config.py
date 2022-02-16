@@ -162,6 +162,10 @@ keys = [
          Key([mod], "0",
              lazy.spawn('gdmflexiserver'),
              desc="Next keyboard layout."
+	     ),
+	 Key([], "Print",
+	     lazy.spawn("./.config/qtile/ss.sh"),
+	     desc='Take screenshot'
 	     ),          
         # Dmenu scripts launched using the key chord SUPER+p followed by 'key'
          KeyChord([mod], "p", [
